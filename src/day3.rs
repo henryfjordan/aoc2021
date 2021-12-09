@@ -37,9 +37,9 @@ fn part1(input: &Vec<u32>) -> u32 {
     gamma * epsilon
 }
 
-#[aoc(day3, part2)]
-fn part2(input: &Vec<u32>) -> u32 {
+// #[aoc(day3, part2)]
+// fn part2(input: &Vec<u32>) -> u32 {
 
     
-    0
-}
+//     0
+// }
