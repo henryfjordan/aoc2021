@@ -20,12 +20,12 @@ fn part1(input: &Vec<Vec<i32>>) -> i32 {
         let max_width = row.len() - 1;
 
         for (j, cell) in row.iter().enumerate() {
-            if (
+            if
                 (i == 0 || cell < &input[i-1][j]) &&
                 (i == max_height || cell < &input[i+1][j]) &&
                 (j == 0 || cell < &input[i][j-1]) &&
                 (j == max_width || cell < &input[i][j+1])
-            ) {
+            {
                 score += 1 + cell;
             }
         }
@@ -80,12 +80,12 @@ fn part2(input: &Vec<Vec<i32>>) -> i32 {
         let max_width = row.len() - 1;
 
         for (j, cell) in row.iter().enumerate() {
-            if (
+            if
                 (i == 0 || cell < &input[i-1][j]) &&
                 (i == max_height || cell < &input[i+1][j]) &&
                 (j == 0 || cell < &input[i][j-1]) &&
                 (j == max_width || cell < &input[i][j+1])
-            ) {
+            {
                 basin_sizes.push(calculate_basin_size(input, (i, j), max_height, max_width))
             }
         }
